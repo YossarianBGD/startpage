@@ -3,8 +3,7 @@
 	<meta charset="UTF-8">
 	<meta name="robots" content="noindex, nofollow">
 	<meta name="referrer" content="no-referrer">
-	<link href="css.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="style.css" rel="stylesheet" type="text/css">
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -15,7 +14,7 @@
 
 	<title>Start</title>
 
-	<script>
+    <script>
 	window.addEventListener('preload', function load() {
 	window.removeEventListener('preload', load, false);
 	document.body.classList.remove('preload');
@@ -188,25 +187,81 @@
 		</ul>
 	</div>
 
-	<div class="box"><h4>Home</h4>
-		<ul>
-			<li><a style="display: inline;" href="https://kino.davor.in.rs/"> 🎬 ARTHAUS KINO</a></li>
-			<li><a style="display: inline;" href="https://torrent.davor.in.rs/"> 🌐 qBittorrent</a></li>
-			<li><a style="display: inline;" href="https://homeassistant.davor.in.rs/"> 🏠 Home Assistant </a></li>
-			<li><a style="display: inline;" href="https://excalidraw.davor.in.rs/"> ✏️ Excalidraw </a></li>
-			<li><a style="display: inline;" href="https://drop.davor.in.rs/"> 🔰 PairDrop </a></li>
-			<li><a style="display: inline;" href="https://wol.davor.in.rs/"> 💻 Wake On Lan </a></li>
-			<li><a style="display: inline;" href="https://casaos.davor.in.rs/"> 🛠️ CasaOS</a></li>
-                        <li><a style="display: inline;" href="https://nas.davor.in.rs/"> 🛠️ NAS</a></li>
-			<li><a style="display: inline;" href="https://pihole.davor.in.rs/"> 🛠️ piHole </a></li>
-			<li><a style="display: inline;" href="https://portainer.davor.in.rs/"> 🛠️ Portainer </a></li>
-			<li><a style="display: inline;" href="https://cf.davor.in.rs/"> 🛠️ Cloudflare Tunnel </a></li>
-		</ul>
-	</div>
+	<div class="box">
+		<h4>Home</h4>
 
+		<!-- Toggle Switch -->
+		<div class="switch-container">
+			<label class="switch">
+				<input type="checkbox" id="linkToggle" onchange="toggleLinks()">
+				<span class="slider"></span>
+			</label>
+			<span class="switch-label" id="switchText">Internet</span>
+		</div>
+
+		<!-- Internet Links -->
+		<div class="toggle-links" id="internetLinks">
+			<ul>
+				<li><a href="https://kino.davor.in.rs/">🎬 ARTHAUS KINO</a></li>
+				<li><a href="https://torrent.davor.in.rs/">🌐 qBittorrent</a></li>
+				<li><a href="https://homeassistant.davor.in.rs/">🏠 Home Assistant</a></li>
+				<li><a href="https://excalidraw.davor.in.rs/">✏️ Excalidraw</a></li>
+				<li><a href="https://drop.davor.in.rs/">🔰 PairDrop</a></li>
+				<li><a href="https://wol.davor.in.rs/">💻 Wake On Lan</a></li>
+				<li><a href="https://casaos.davor.in.rs/">🛠️ CasaOS</a></li>
+				<li><a href="https://nas.davor.in.rs/">🛠️ NAS</a></li>
+				<li><a href="https://pihole.davor.in.rs/">🛠️ piHole</a></li>
+				<li><a href="https://portainer.davor.in.rs/">🛠️ Portainer</a></li>
+				<li><a href="https://cf.davor.in.rs/">🛠️ Cloudflare Tunnel</a></li>
+			</ul>
+		</div>
+
+		<!-- Local IP Links -->
+		<div class="toggle-links" id="localLinks" style="display: none;">
+			<ul>
+				<li><a href="http://192.168.1.10/">🎬 ARTHAUS KINO</a></li>
+				<li><a href="http://192.168.1.11/">🌐 qBittorrent</a></li>
+				<li><a href="http://192.168.1.12/">🏠 Home Assistant</a></li>
+				<li><a href="http://192.168.1.13/">✏️ Excalidraw</a></li>
+				<li><a href="http://192.168.1.14/">🔰 PairDrop</a></li>
+				<li><a href="http://192.168.1.15/">💻 Wake On Lan</a></li>
+				<li><a href="http://192.168.1.16/">🛠️ CasaOS</a></li>
+				<li><a href="http://192.168.1.17/">🛠️ NAS</a></li>
+				<li><a href="http://192.168.1.18/">🛠️ piHole</a></li>
+				<li><a href="http://192.168.1.19/">🛠️ Portainer</a></li>
+				<li><a href="http://192.168.1.20/">🛠️ Cloudflare Tunnel</a></li>
+			</ul>
+		</div>
+	</div>
 </div>
 
+<script>
+function toggleLinks() {
+	const checkbox = document.getElementById("linkToggle");
+	const useLocal = checkbox.checked;
 
+	// Toggle visibility
+	document.getElementById("internetLinks").style.display = useLocal ? "none" : "block";
+	document.getElementById("localLinks").style.display = useLocal ? "block" : "none";
+
+	// Update label text
+	document.getElementById("switchText").textContent = useLocal ? "IP" : "DNS";
+
+	// Save to localStorage
+	localStorage.setItem("linkMode", useLocal ? "ip" : "dns");
+}
+
+// On page load, restore preference
+window.addEventListener("DOMContentLoaded", () => {
+	const savedMode = localStorage.getItem("linkMode");
+
+	if (savedMode === "ip") {
+		document.getElementById("linkToggle").checked = true;
+	}
+
+	toggleLinks(); // Apply correct visibility
+});
+</script>
 
 
 </body></html>
