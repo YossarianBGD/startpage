@@ -184,10 +184,11 @@
 			<li><a href="https://wotstats.org/stats/eu/dafor_bgd/"> WoT Stats </a></li>
 			<li><a href="https://aslain.com/index.php?/topic/13-aslains-wot-modpack/"> Aslain's MOD Pack </a></li>
 			<li><a href="https://modxvm.com/en/"> XVM MOD </a></li>
+			<li><a href="#" onclick="toggleDiv(); return false;">Click to Show/Hide Content</a></li>
 		</ul>
 	</div>
 
-	<div class="box">
+	<div class="box" id="skriveno">
 		<h4>Home</h4>
 
 		<!-- Toggle Switch -->
@@ -266,6 +267,16 @@ window.addEventListener("DOMContentLoaded", () => {
 	toggleLinks(); // Apply correct visibility
 });
 </script>
+<script>
+    function toggleDiv() {
+      var div = document.getElementById('skriveno');
+      if (div.style.display === 'none' || div.style.display === '') {
+        div.style.display = 'block';
+      } else {
+        div.style.display = 'none';
+      }
+    }
+  </script>
 
 
 </body></html>
