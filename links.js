@@ -179,7 +179,7 @@ const sections = [
             {
                 name: "QUI",
                 icon: "🌐",
-                dns: "https://qui.davor.in.rs/"
+                dns: "https://qui.davor.in.rs/",
                 ip: "http://192.168.20.254:7476/"
             },
             {
@@ -190,13 +190,13 @@ const sections = [
             {
                 name: "Anchor (notes)",
                 icon: "📝",
-                dns: "https://notes.davor.in.rs/"
+                dns: "https://notes.davor.in.rs/",
                 ip: "http://192.168.20.254:43030/"
             },
             {
                 name: "Forgejo",
                 icon: "🧑‍💻",
-                dns: "https://git.davor.in.rs/"
+                dns: "https://git.davor.in.rs/",
                 ip: "http://192.168.20.254:3073/"
             },
             {
@@ -232,7 +232,7 @@ const sections = [
             {
                 name: "voidAuth",
                 icon: "🧑",
-                dns: "https://id.davor.in.rs/"
+                dns: "https://id.davor.in.rs/",
                 ip: "http://192.168.20.254:3000/"
             },
             {
