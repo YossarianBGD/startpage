@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,451 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
     <meta name="referrer" content="no-referrer">
-    <link href="style.css" rel="stylesheet">
     <meta name="theme-color" content="#151922">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+
+    <link href="style.css" rel="stylesheet">
+
     <title>Start</title>
+
+    <script src="links.js" defer></script>
+    <script src="apps.js" defer></script>
 </head>
 <body>
+
 <div class="page">
 
-<header class="header">
-    <div>
-        <h1>Welcome to the Web.</h1>
-        <p class="subtitle">Your personal dashboard</p>
-    </div>
-    <div class="clock-container">
-        <div id="clock">--:--:--</div>
-        <div id="date">Loading date...</div>
-    </div>
-</header>
-
-<section class="search-box">
-    <form id="searchForm" action="https://www.google.com/search" method="get">
-        <select id="searchEngine" aria-label="Search engine">
-            <option value="google">Google</option>
-            <option value="bing">Bing</option>
-            <option value="duckduckgo">DuckDuckGo</option>
-            <option value="startpage">Startpage</option>
-            <option value="youtube">YouTube</option>
-            <option value="imdb">IMDb</option>
-        </select>
-        <input type="text" name="q" id="searchInput"
-               placeholder="Search the web..." autocomplete="off" autofocus>
-        <button type="submit">Search</button>
-    </form>
-</section>
-
-<main id="boxes">
-
-<section class="box" data-section="email">
-    <button class="box-header" type="button" aria-expanded="true">
-        <span>SBB &amp; Email</span><span class="collapse-icon">−</span>
-    </button>
-    <div class="box-content">
-        <ul>
-            <li><a href="http://www.sbb.rs/">SBB</a> <a href="http://webmail.sbb.rs/">Mail</a> <a href="http://forum.sbb.rs/">Forum</a> <a href="https://sbb.rs/account/">Portal</a></li>
-            <li><a href="https://mail.google.com/">Gmail</a></li>
-            <li><a href="https://www.eclipso.eu/email.php">Eclipso mail</a></li>
-            <li><a href="https://www.outlook.com/">Outlook Mail</a></li>
-            <li><a href="https://mail.yandex.com/">Yandex Mail</a></li>
-            <li><a href="https://messages.google.com/web/">SMS from mobile</a></li>
-        </ul>
-    </div>
-</section>
-
-<section class="box" data-section="forums">
-    <button class="box-header" type="button" aria-expanded="true">
-        <span>Forumi</span><span class="collapse-icon">−</span>
-    </button>
-    <div class="box-content">
-        <ul>
-            <li><a href="https://parapsihopatologija.com/forums/">Parapsihopatologija</a></li>
-            <li><a href="http://vasudeva.forumburundi.com/">Burundi Forum</a></li>
-            <li><a href="http://forum.klanrur.rs/">KlanRUR Forum</a></li>
-            <li><a href="http://www.benchmark.rs/forum/">Benchmark Forum</a></li>
-            <li><a href="http://www.elitesecurity.org/">elitesecurity Forum</a></li>
-        </ul>
-    </div>
-</section>
-
-<section class="box" data-section="politics">
-    <button class="box-header" type="button" aria-expanded="true">
-        <span>Politika i društvo</span><span class="collapse-icon">−</span>
-    </button>
-    <div class="box-content">
-        <ul>
-            <li><a href="https://rs.n1info.com/">N1</a></li>
-            <li><a href="http://www.pescanik.net/">Peščanik</a></li>
-            <li><a href="http://www.danas.rs/">Danas</a></li>
-            <li><a href="http://www.elektrobeton.net/">Beton</a></li>
-            <li><a href="https://www.balkandownload.org/forum/35-doma%C4%87e-knjige/">Balkan Download - Domaće knjige</a></li>
-        </ul>
-    </div>
-</section>
-
-<section class="box" data-section="social">
-    <button class="box-header" type="button" aria-expanded="true">
-        <span>Društvene mreže</span><span class="collapse-icon">−</span>
-    </button>
-    <div class="box-content">
-        <ul>
-            <li><a href="https://twitter.com/">Twitter</a></li>
-            <li><a href="https://bsky.app/">Bluesky</a></li>
-            <li><a href="https://www.facebook.com/">Facebook</a></li>
-            <li><a href="https://www.instagram.com/">Instagram</a></li>
-            <li><a href="http://www.reddit.com/">reddit</a></li>
-        </ul>
-    </div>
-</section>
-
-<section class="box" data-section="tv">
-    <button class="box-header" type="button" aria-expanded="true">
-        <span>TV &amp; Streaming</span><span class="collapse-icon">−</span>
-    </button>
-    <div class="box-content">
-        <ul>
-            <li><a href="http://www.youtube.com/">Youtube</a></li>
-            <li><a href="https://www.twitch.tv/">Twitch</a></li>
-            <li><a href="https://eon.tv/">EON</a></li>
-        </ul>
-    </div>
-</section>
-
-<section class="box" data-section="software">
-    <button class="box-header" type="button" aria-expanded="true">
-        <span>Software</span><span class="collapse-icon">−</span>
-    </button>
-    <div class="box-content">
-        <ul>
-            <li><a href="https://chocolatey.org/packages?q=&moderatorQueue=&prerelease=false&sortOrder=package-created">Chocolatey Packages</a></li>
-            <li><a href="https://scoop.sh/#/apps">Scoop</a></li>
-            <li><a href="http://www.portablefreeware.com/">Portable Freeware</a></li>
-            <li><a href="http://win.softpedia.com/">Softpedia</a></li>
-        </ul>
-    </div>
-</section>
-
-<section class="box" data-section="hardware">
-    <button class="box-header" type="button" aria-expanded="true">
-        <span>Tehnika i Hardware</span><span class="collapse-icon">−</span>
-    </button>
-    <div class="box-content">
-        <ul>
-            <li><a href="http://www.itsvet.com/">IT Svet</a></li>
-            <li><a href="http://www.mobilnisvet.com/">Mobilni Svet</a></li>
-            <li><a href="http://www.eponuda.com/">ePonuda</a></li>
-            <li><a href="http://www.gigatron.rs/">Gigatron</a></li>
-        </ul>
-    </div>
-</section>
-
-<section class="box" data-section="shopping">
-    <button class="box-header" type="button" aria-expanded="true">
-        <span>Kupovina</span><span class="collapse-icon">−</span>
-    </button>
-    <div class="box-content">
-        <ul>
-            <li><a href="http://www.aliexpress.com/">AliExpress</a></li>
-            <li><a href="http://www.temu.com/">Temu</a></li>
-            <li><a href="http://www.banggood.com/">Banggood</a></li>
-            <li><a href="http://www.limundo.com/">Limundo</a></li>
-            <li><a href="https://www.kupindo.com/">Kupindo</a></li>
-            <li><a href="http://www.kursna-lista.com/kursna-lista-nbs">Kursna lista</a></li>
-            <li><a href="https://intesaonline.bancaintesa.rs/web/logon">Banca Intesa eBanking</a></li>
-            <li><a href="https://online.mobibanka.rs/">Mobi Banka eBanking</a></li>
-        </ul>
-    </div>
-</section>
-
-<section class="box" data-section="movies">
-    <button class="box-header" type="button" aria-expanded="true">
-        <span>Filmovi</span><span class="collapse-icon">−</span>
-    </button>
-    <div class="box-content">
-        <ul>
-            <li><a href="http://www.imdb.com/">iMDB</a></li>
-            <li><a href="https://alwaysgoodmovies.com/">Always Good Movies</a></li>
-            <li><a href="https://www.patreon.com/cw/MisliteMojomGlavom/posts">Freedom Patreon</a></li>
-            <li><a href="https://yts.gg">YTS YIFY movies</a></li>
-            <li><a href="https://1337x.to/">1337x Torrents</a></li>
-            <li><a href="https://rutracker.org/forum/viewforum.php?f=2339">ru tracker movies</a></li>
-            <li><a href="https://ext.to/">EXT Torrents</a></li>
-            <li><a href="http://titlovi.com/">titlovi.com</a></li>
-            <li><a href="http://www.podnapisi.net/">Podnapisi</a></li>
-            <li><a href="https://subdl.com/">SUBDL</a></li>
-        </ul>
-    </div>
-</section>
-
-<section class="box" data-section="home">
-    <button class="box-header" type="button" aria-expanded="true">
-        <span>Home Lab</span>
-        <span class="collapse-icon">−</span>
-    </button>
-    <div class="box-content">
-        <div class="mode-container">
-            <span class="mode-label">Connection:</span>
-            <div class="mode-switch">
-                <button type="button" class="mode-button" data-mode="dns">DNS</button>
-                <button type="button" class="mode-button" data-mode="ip">IP</button>
-                <button type="button" class="mode-button" data-mode="both">Both</button>
-            </div>
+    <header class="header">
+        <div>
+            <h1>Welcome to the Web.</h1>
+            <p class="subtitle">Your personal dashboard</p>
         </div>
-        <ul id="serviceList" class="service-list"></ul>
-    </div>
-</section>
 
-</main>
+        <div class="clock-container">
+            <div id="clock">--:--:--</div>
+            <div id="date">Loading date...</div>
+        </div>
+    </header>
 
-<footer>Yossarian's Startpage</footer>
+    <section class="search-box">
+        <form id="searchForm"
+              action="https://www.google.com/search"
+              method="get">
+
+            <select id="searchEngine" aria-label="Search engine">
+                <option value="google">Google</option>
+                <option value="bing">Bing</option>
+                <option value="duckduckgo">DuckDuckGo</option>
+                <option value="startpage">Startpage</option>
+                <option value="youtube">YouTube</option>
+                <option value="imdb">IMDb</option>
+            </select>
+
+            <input
+                type="text"
+                name="q"
+                id="searchInput"
+                placeholder="Search the web..."
+                autocomplete="off"
+                autofocus
+            >
+
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <main id="boxes"></main>
+
+    <footer>Yossarian's Startpage</footer>
 
 </div>
-
-<script>
-
-// ==========================================
-// CLOCK AND DATE
-// ==========================================
-
-function updateClock() {
-    const now = new Date();
-
-    document.getElementById("clock").textContent =
-        now.toLocaleTimeString("en-GB", {
-            timeZone: "Europe/Belgrade",
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit"
-        });
-
-    document.getElementById("date").textContent =
-        now.toLocaleDateString("en-GB", {
-            timeZone: "Europe/Belgrade",
-            weekday: "long",
-            day: "numeric",
-            month: "long",
-            year: "numeric"
-        });
-}
-
-updateClock();
-setInterval(updateClock, 1000);
-
-
-// ==========================================
-// GLOBAL SEARCH
-// ==========================================
-
-const searchEngines = {
-    google: "https://www.google.com/search",
-    bing: "https://www.bing.com/search",
-    duckduckgo: "https://duckduckgo.com/",
-    startpage: "https://www.startpage.com/sp/search",
-    youtube: "https://www.youtube.com/results",
-    imdb: "https://www.imdb.com/find/"
-};
-
-const searchForm = document.getElementById("searchForm");
-const searchEngine = document.getElementById("searchEngine");
-
-searchEngine.value =
-    localStorage.getItem("searchEngine") || "google";
-
-searchForm.action = searchEngines[searchEngine.value];
-
-searchEngine.addEventListener("change", function () {
-    searchForm.action = searchEngines[this.value];
-    localStorage.setItem("searchEngine", this.value);
-});
-
-
-// ==========================================
-// HOME LAB SERVICES
-// ==========================================
-
-const services = [
-    {
-        name: "ARTHAUS KINO",
-        icon: "🎬",
-        dns: "https://kino.davor.in.rs/",
-        ip: "http://192.168.20.10:28096/"
-    },
-    {
-        name: "qBittorrent",
-        icon: "🌐",
-        dns: "https://torrent.davor.in.rs/",
-        ip: "https://192.168.20.10:18181/"
-    },
-    {
-        name: "QUI",
-        icon: "🌐",
-        dns: "https://qui.davor.in.rs/"
-    },
-    {
-        name: "Paperless-ngx",
-        icon: "📄",
-        dns: "https://paperless.davor.in.rs/"
-    },
-    {
-        name: "Excalidraw",
-        icon: "✏️",
-        dns: "https://excalidraw.davor.in.rs/",
-        ip: "http://192.168.20.254:4002/"
-    },
-    {
-        name: "Trip",
-        icon: "🗺️",
-        dns: "https://trip.davor.in.rs/",
-        ip: "https://192.168.20.254:48081/"
-    },
-    {
-        name: "Wake On Lan",
-        icon: "💻",
-        dns: "https://wol.davor.in.rs/",
-        ip: "http://192.168.20.254:8090/"
-    },
-    {
-        name: "NAS",
-        icon: "🛠️",
-        dns: "https://nas.davor.in.rs/",
-        ip: "https://192.168.20.10:38031/"
-    },
-    {
-        name: "Pi-hole",
-        icon: "🛠️",
-        dns: "https://pihole.davor.in.rs/",
-        ip: "http://192.168.20.254:8080/"
-    },
-    {
-        name: "voidAuth",
-        icon: "🛠️",
-        dns: "https://id.davor.in.rs/"
-    },
-    {
-        name: "Dockhand",
-        icon: "🛠️",
-        dns: "https://dockhand.davor.in.rs/",
-        ip: "http://192.168.20.254:3005/"
-    },
-    {
-        name: "Cloudflared",
-        icon: "☁️",
-        ip: "http://192.168.20.254:14333/"
-    }
-];
-
-
-// ==========================================
-// DNS / IP / BOTH DISPLAY
-// ==========================================
-
-const serviceList = document.getElementById("serviceList");
-
-let connectionMode =
-    localStorage.getItem("connectionMode") || "dns";
-
-
-function renderServices() {
-    serviceList.innerHTML = "";
-
-    services.forEach(service => {
-        const li = document.createElement("li");
-        li.className = "service-item";
-
-        const name = document.createElement("span");
-        name.className = "service-name";
-        name.textContent = service.icon + " " + service.name;
-
-        li.appendChild(name);
-
-        const links = document.createElement("div");
-        links.className = "service-links";
-
-        function addLink(label, url, type) {
-            if (!url) return;
-
-            const a = document.createElement("a");
-            a.href = url;
-            a.target = "_blank";
-            a.rel = "noopener noreferrer";
-            a.className = "service-link " + type;
-            a.textContent = label;
-
-            links.appendChild(a);
-        }
-
-        if (connectionMode === "dns" || connectionMode === "both") {
-            addLink("DNS", service.dns, "dns-link");
-        }
-
-        if (connectionMode === "ip" || connectionMode === "both") {
-            addLink("IP", service.ip, "ip-link");
-        }
-
-        li.appendChild(links);
-        serviceList.appendChild(li);
-    });
-
-    document.querySelectorAll(".mode-button").forEach(button => {
-        const active = button.dataset.mode === connectionMode;
-        button.classList.toggle("active", active);
-        button.setAttribute("aria-pressed", String(active));
-    });
-}
-
-
-// MODE BUTTONS
-
-document.querySelectorAll(".mode-button").forEach(button => {
-    button.addEventListener("click", () => {
-        connectionMode = button.dataset.mode;
-        localStorage.setItem("connectionMode", connectionMode);
-        renderServices();
-    });
-});
-
-renderServices();
-
-
-// ==========================================
-// COLLAPSIBLE BOXES
-// ==========================================
-
-document.querySelectorAll(".box").forEach(box => {
-    const button = box.querySelector(".box-header");
-    const content = box.querySelector(".box-content");
-    const icon = box.querySelector(".collapse-icon");
-
-    const key = "box_" + box.dataset.section;
-
-    const savedState = localStorage.getItem(key);
-
-    if (savedState === "collapsed") {
-        content.hidden = true;
-        button.setAttribute("aria-expanded", "false");
-        icon.textContent = "+";
-    }
-
-    button.addEventListener("click", () => {
-        const collapsed = !content.hidden;
-
-        content.hidden = collapsed;
-
-        button.setAttribute(
-            "aria-expanded",
-            String(!collapsed)
-        );
-
-        icon.textContent = collapsed ? "+" : "−";
-
-        localStorage.setItem(
-            key,
-            collapsed ? "collapsed" : "expanded"
-        );
-    });
-});
-
-</script>
 
 </body>
 </html>

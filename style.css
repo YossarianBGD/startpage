@@ -106,9 +106,9 @@ h1 {
     font-size: 14px;
     outline: none;
     transition:
-            border-color 0.2s ease,
-            box-shadow 0.2s ease,
-            background 0.2s ease;
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
 }
 
 #searchEngine {
@@ -144,9 +144,9 @@ h1 {
     font-size: 14px;
     font-weight: 600;
     transition:
-            background 0.2s ease,
-            transform 0.2s ease,
-            box-shadow 0.2s ease;
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 #searchForm button:hover {
@@ -172,14 +172,12 @@ h1 {
    BOXES
 ========================================== */
 
-
 .box {
     min-width: 0;
     overflow: hidden;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 9px;
-
     transition:
         transform 0.22s ease,
         border-color 0.22s ease,
@@ -191,7 +189,6 @@ h1 {
     border-color: #4c6d98;
     box-shadow: 0 8px 22px rgba(0,0,0,0.22);
 }
-
 
 .box-header {
     display: flex;
@@ -215,6 +212,11 @@ h1 {
     color: var(--accent-hover);
 }
 
+.box-header:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+}
+
 .collapse-icon {
     color: var(--muted);
     font-size: 18px;
@@ -230,9 +232,8 @@ h1 {
 }
 
 
-
 /* ==========================================
-   NORMAL LINKS - MODERN HOVER
+   NORMAL LINKS
 ========================================== */
 
 .box ul {
@@ -276,14 +277,15 @@ h1 {
     width: 100%;
 }
 
-/* Keyboard navigation */
 .box a:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 4px;
     border-radius: 2px;
 }
 
-
+.box li a + a {
+    margin-left: 8px;
+}
 
 /* ==========================================
    HOME LAB CONNECTION MODE
@@ -351,6 +353,11 @@ h1 {
 }
 
 .service-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: nowrap;
     padding: 7px 0 !important;
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
@@ -361,6 +368,8 @@ h1 {
 
 .service-name {
     display: block;
+    flex: 1;
+    min-width: 0;
     margin-bottom: 4px;
     color: var(--text);
     font-size: 13px;
@@ -369,35 +378,32 @@ h1 {
 
 .service-links {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 6px;
+    flex-shrink: 0;
 }
 
 .service-link {
     display: inline-block;
-    padding: 2px 7px;
-    border-radius: 4px;
-    font-size: 10px;
+    padding: 3px 7px;
+    border-radius: 5px;
+    font-size: 0.75rem;
     font-weight: 700;
     text-decoration: none !important;
 }
 
 .dns-link {
-    color: #8bbaff !important;
-    background: rgba(87,148,232,0.13);
-}
-
-.dns-link:hover {
-    background: rgba(87,148,232,0.25);
+    color: #ffffff !important;
+    background: #244b70;
 }
 
 .ip-link {
-    color: #68d6ad !important;
-    background: rgba(54,181,138,0.13);
+    color: #ffffff !important;
+    background: #386044;
 }
 
-.ip-link:hover {
-    background: rgba(54,181,138,0.25);
+.service-link:hover {
+    filter: brightness(1.3);
 }
 
 
@@ -483,49 +489,4 @@ footer {
         grid-template-columns: 1fr;
     }
 
-}
-
-
-/* Home Lab compact inline layout */
-
-.service-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    flex-wrap: nowrap;
-}
-
-.service-name {
-    flex: 1;
-    min-width: 0;
-}
-
-.service-links {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-shrink: 0;
-}
-
-.service-link {
-    display: inline-block;
-    padding: 3px 7px;
-    border-radius: 5px;
-    font-size: 0.75rem;
-    text-decoration: none;
-}
-
-.dns-link {
-    background: #244b70;
-    color: #ffffff;
-}
-
-.ip-link {
-    background: #386044;
-    color: #ffffff;
-}
-
-.service-link:hover {
-    filter: brightness(1.3);
 }
