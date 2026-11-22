@@ -110,7 +110,8 @@ const sections = [
             { name: "IT Svet", url: "http://www.itsvet.com/" },
             { name: "Mobilni Svet", url: "http://www.mobilnisvet.com/" },
             { name: "ePonuda", url: "http://www.eponuda.com/" },
-            { name: "Gigatron", url: "http://www.gigatron.rs/" }
+            { name: "Gigatron", url: "http://www.gigatron.rs/" },
+            { name: "BigBang", url: "https://www.bigbang.rs/" }
         ]
     },
 
@@ -122,9 +123,8 @@ const sections = [
         id: "shopping",
         title: "Kupovina",
         items: [
-            { name: "AliExpress", url: "http://www.aliexpress.com/" },
             { name: "Temu", url: "http://www.temu.com/" },
-            { name: "Banggood", url: "http://www.banggood.com/" },
+            { name: "AliExpress", url: "http://www.aliexpress.com/" },
             { name: "Limundo", url: "http://www.limundo.com/" },
             { name: "Kupindo", url: "https://www.kupindo.com/" },
             { name: "Kursna lista", url: "http://www.kursna-lista.com/kursna-lista-nbs" },
@@ -141,7 +141,8 @@ const sections = [
         id: "movies",
         title: "Filmovi",
         items: [
-            { name: "iMDB", url: "http://www.imdb.com/" },
+            { name: "iMDB", url: "https://www.imdb.com/" },
+            { name: "Letterboxd", url: "https://letterboxd.com/" },
             { name: "Always Good Movies", url: "https://alwaysgoodmovies.com/" },
             { name: "Freedom Patreon", url: "https://www.patreon.com/cw/MisliteMojomGlavom/posts" },
             { name: "YTS YIFY movies", url: "https://yts.gg" },
@@ -179,11 +180,24 @@ const sections = [
                 name: "QUI",
                 icon: "🌐",
                 dns: "https://qui.davor.in.rs/"
+                ip: "http://192.168.20.254:7476/"
             },
             {
                 name: "Paperless-ngx",
                 icon: "📄",
                 dns: "https://paperless.davor.in.rs/"
+            },
+            {
+                name: "Anchor (notes)",
+                icon: "📝",
+                dns: "https://notes.davor.in.rs/"
+                ip: "http://192.168.20.254:43030/"
+            },
+            {
+                name: "Forgejo",
+                icon: "🧑‍💻",
+                dns: "https://git.davor.in.rs/"
+                ip: "http://192.168.20.254:3073/"
             },
             {
                 name: "Excalidraw",
@@ -199,30 +213,31 @@ const sections = [
             },
             {
                 name: "Wake On Lan",
-                icon: "💻",
+                icon: "🛌",
                 dns: "https://wol.davor.in.rs/",
                 ip: "http://192.168.20.254:8090/"
             },
             {
                 name: "NAS",
-                icon: "🛠️",
+                icon: "💽",
                 dns: "https://nas.davor.in.rs/",
                 ip: "https://192.168.20.10:38031/"
             },
             {
                 name: "Pi-hole",
-                icon: "🛠️",
+                icon: "🌐",
                 dns: "https://pihole.davor.in.rs/",
                 ip: "http://192.168.20.254:8080/"
             },
             {
                 name: "voidAuth",
-                icon: "🛠️",
+                icon: "🧑",
                 dns: "https://id.davor.in.rs/"
+                ip: "http://192.168.20.254:3000/"
             },
             {
                 name: "Dockhand",
-                icon: "🛠️",
+                icon: "🐋",
                 dns: "https://dockhand.davor.in.rs/",
                 ip: "http://192.168.20.254:3005/"
             },
