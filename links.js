@@ -144,7 +144,7 @@ const sections = [
             { name: "iMDB", url: "https://www.imdb.com/" },
             { name: "Letterboxd", url: "https://letterboxd.com/" },
             { name: "Always Good Movies", url: "https://alwaysgoodmovies.com/" },
-            { name: "Freedom Patreon", url: "https://www.patreon.com/cw/MisliteMojomGlavom/posts" },
+            { name: "Mislite mojom glavom", url: "https://www.patreon.com/cw/MisliteMojomGlavom/posts" },
             { name: "YTS YIFY movies", url: "https://yts.gg" },
             { name: "1337x Torrents", url: "https://1337x.to/" },
             { name: "ru tracker movies", url: "https://rutracker.org/forum/viewforum.php?f=2339" },
