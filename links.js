@@ -145,7 +145,7 @@ const sections = [
             { name: "Letterboxd", url: "https://letterboxd.com/" },
             { name: "Always Good Movies", url: "https://alwaysgoodmovies.com/" },
             { name: "Mislite mojom glavom", url: "https://www.patreon.com/cw/MisliteMojomGlavom/posts" },
-            { name: "YTS YIFY movies", url: "https://yts.gg" },
+            { name: "YTS YIFY movies", url: "https://yts.pw/home" },
             { name: "1337x Torrents", url: "https://1337x.to/" },
             { name: "ru tracker movies", url: "https://rutracker.org/forum/viewforum.php?f=2339" },
             { name: "EXT Torrents", url: "https://ext.to/" },
